@@ -9,15 +9,15 @@ El archivo `Main.java` ejecuta la plataforma de gestión de proyectos utilizando
 
 ### 1. Uso del Patrón Factory Method
 
-java
-// Crear una fábrica de proyectos
+
+Crear una fábrica de proyectos
 ProjectFactory factory = new ProjectFactory();
 
-// Crear y ejecutar un proyecto pequeño
+Crear y ejecutar un proyecto pequeño
 Project smallProject = factory.createProject("small");
 smallProject.execute();
 
-// Crear y ejecutar un proyecto grande
+Crear y ejecutar un proyecto grande
 Project bigProject = factory.createProject("big");
 bigProject.execute();
 
@@ -26,14 +26,13 @@ Aquí se usa `ProjectFactory` para crear instancias de `SmallProject` y `BigProj
 
 ### 2. Uso del Patrón Adapter
 
-java
-// Crear un servicio externo de análisis de IA
+Crear un servicio externo de análisis de IA
 Analisis_IA externalService = new Analisis_IA();
 
-// Adaptar el servicio para que funcione en la plataforma
+Adaptar el servicio para que funcione en la plataforma
 DelayPredicator adapter = new DelayPredicatorAdapter(externalService);
 
-// Obtener una predicción de retraso en días
+Obtener una predicción de retraso en días
 String prediction = adapter.predict("5");
 System.out.println(prediction); // Retraso predicho: 5 días
 
@@ -42,16 +41,15 @@ Se emplea un `Adapter` para conectar la plataforma con un servicio externo de pr
 
 ### 3. Uso del Patrón Observer
 
-java
-// Crear usuarios
+Crear usuarios
 User user = new User("Tiburcio");
 User user2 = new User("Segismundo");
 
-// Asignar observadores a los proyectos
+Asignar observadores a los proyectos
 smallProject.attach(user);
 bigProject.attach(user2);
 
-// Cambiar el estado de los proyectos
+Cambiar el estado de los proyectos
 smallProject.setStatus("Completada");
 bigProject.setStatus("En progreso");
 
@@ -61,8 +59,11 @@ Aquí, `User` actúa como observador de `SmallProject` y `BigProject`. Cuando el
 ### 4. Salida Esperada
 
 ```plaintext
-Tiburcio ha recibido una notificación: El proyecto pequeño ahora está Completada
-Segismundo ha recibido una notificación: El proyecto grande ahora está En progreso
+Ejecutando Projecto simple...
+Ejecutando Proyecto grande...
+Retraso predicho: 5 días
+Tiburcio ha recibido una notificación: El projecto pequeño ahora está Completada
+Segismundo ha recibido una notificación: El Projecto grande ahora está En progreso
 ```
 
 Este es el resultado esperado cuando se ejecuta `Main.java`.
@@ -90,3 +91,13 @@ Este es el resultado esperado cuando se ejecuta `Main.java`.
 1. Clona el repositorio.
 2. Abre el proyecto en tu IDE favorito.
 3. Ejecuta la clase `Main.java` para ver el funcionamiento de la plataforma.
+
+---
+
+## Enlace al repositorio
+
+```
+https://github.com/MarcosAlonso05/Gestion-de-Proyectos.git
+```
+
+---
