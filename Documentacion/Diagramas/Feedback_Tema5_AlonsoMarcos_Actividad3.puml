@@ -1,0 +1,35 @@
+@startuml
+title Plataforma de Gestión de Proyectos
+
+package "Plataforma" {
+    [Módulo de Proyectos] --> [Módulo de IA] : Solicita predicciones/recomendaciones
+    [Módulo de IA] --> [Módulo de Proyectos] : Devuelve análisis y recomendaciones
+    [Módulo de Proyectos] --> [Módulo de Tareas] : Administra tareas y asignaciones
+    [Módulo de Usuarios] --> [Módulo de Proyectos] : Administra proyectos
+    [Módulo de Usuarios] --> [Módulo de Tareas] : Gestiona y asigna tareas
+}
+
+package "Módulo de Proyectos" {
+    [Crear Proyecto]
+    [Actualizar Proyecto]
+    [Eliminar Proyecto]
+}
+
+package "Módulo de Tareas" {
+    [Crear Tarea]
+    [Actualizar Tarea]
+    [Eliminar Tarea]
+    [Asignar Tarea]
+}
+
+package "Módulo de IA" {
+    [Predecir Retrasos]
+    [Generar Recomendaciones]
+}
+
+package "Módulo de Usuarios" {
+    [Autenticar Usuarios]
+    [Gestionar Permisos]
+}
+
+@enduml
