@@ -1,4 +1,15 @@
 # Gestion-de-Proyectos
+
+---
+
+## Enlace al repositorio
+
+```
+https://github.com/MarcosAlonso05/Gestion-de-Proyectos.git
+```
+
+---
+
 ## Ejemplo de Uso Codigo del Repositorio
 
 Este proyecto es una plataforma de gestión de proyectos que utiliza los patrones de diseño Factory Method, Observer y Adapter. A continuación, se muestra cómo usar la plataforma paso a paso.
@@ -91,13 +102,3 @@ Este es el resultado esperado cuando se ejecuta `Main.java`.
 1. Clona el repositorio.
 2. Abre el proyecto en tu IDE favorito.
 3. Ejecuta la clase `Main.java` para ver el funcionamiento de la plataforma.
-
----
-
-## Enlace al repositorio
-
-```
-https://github.com/MarcosAlonso05/Gestion-de-Proyectos.git
-```
-
----
